@@ -1,3 +1,5 @@
+local line_begin = require('luasnip.extras.expand_conditions').line_begin
+
 return {
   s(
     { trig = 'tt', dscr = "Expands 'tt' into '\texttt{}'" },
@@ -11,10 +13,10 @@ return {
     )
   ),
   s(
-    { trig = 'bb', dscr = "Expands 'bb' into '\textbf{}'" },
+    { trig = 'bb', snippetType = 'autosnippet', dscr = "Expands 'bb' into '\textbf{}'" },
     fmta(
       [[
-        \mathbf{<>}
+        \textbf{<>}
       ]],
       {
         i(1),
@@ -22,7 +24,7 @@ return {
     )
   ),
   s(
-    { trig = 'ii', dscr = "Expands 'ii' into '\textit{}'" },
+    { trig = 'ii', snippetType = 'autosnippet', dscr = "Expands 'ii' into '\textit{}'" },
     fmta(
       [[
         \textit{<>}
@@ -33,7 +35,7 @@ return {
     )
   ),
   s(
-    { trig = 'cc', dscr = "Expands 'cc' into '\\mathcal{}'" },
+    { trig = 'cc', snippetType = 'autosnippet', dscr = "Expands 'cc' into '\\mathcal{}'" },
     fmta(
       [[
         \mathcal{<>}
@@ -66,19 +68,19 @@ return {
             \centering
             \includegraphics[width=<>\textwidth]{<>}
             \caption{<>}
-            \label{<>}
+            \label{fig:<>}
         \end{figure}
       ]],
       {
         i(1),
         i(2, 'image.png'),
         i(3, 'Caption for the figure'),
-        i(4, 'fig:label'),
+        i(4, 'label'),
       }
     )
   ),
   s(
-    { trig = 'tcl', dscr = "Exapnds 'tcl' into '\\textcolor{}{}" },
+    { trig = 'tcl', snippetType = 'autosnippet', dscr = "Exapnds 'tcl' into '\\textcolor{}{}" },
     fmta(
       [[
         \textcolor{<>}{<>}
@@ -90,7 +92,7 @@ return {
     )
   ),
   s(
-    { trig = 'tcr', dscr = "Expands 'tcr' into '\\textcolor{red}{}'" },
+    { trig = 'tcr', snippetType = 'autosnippet', dscr = "Expands 'tcr' into '\\textcolor{red}{}'" },
     fmta(
       [[
         \textcolor{red}{<>}
@@ -101,7 +103,7 @@ return {
     )
   ),
   s(
-    { trig = 'h1', dscr = "Exapnds 'h1' into '\\section{}" },
+    { trig = 'h1', condition = line_begin, snippetType = 'autosnippet', dscr = "Exapnds 'h1' into '\\section{}" },
     fmta(
       [[
         \section{<>}
@@ -112,7 +114,7 @@ return {
     )
   ),
   s(
-    { trig = 'h2', dscr = "Expands 'h2' into '\\subsection{}'" },
+    { trig = 'h2', condition = line_begin, snippetType = 'autosnippet', dscr = "Expands 'h2' into '\\subsection{}'" },
     fmta(
       [[
         \subsection{<>}
@@ -123,7 +125,7 @@ return {
     )
   ),
   s(
-    { trig = 'h3', dscr = "Expands 'h3' into '\\subsubsection{}'" },
+    { trig = 'h3', condition = line_begin, snippetType = 'autosnippet', dscr = "Expands 'h3' into '\\subsubsection{}'" },
     fmta(
       [[
         \subsubsection{<>}
@@ -134,7 +136,7 @@ return {
     )
   ),
   s(
-    { trig = 'ot', dscr = "Expands 'ot' into an outline environment" },
+    { trig = 'ot', condition = line_begin, snippetType = 'autosnippet', dscr = "Expands 'ot' into an outline environment" },
     fmta(
       [[
         \begin{outline}
@@ -147,7 +149,7 @@ return {
     )
   ),
   s(
-    { trig = 'oten', dscr = "Expands 'oten' into an outline enumerate environment" },
+    { trig = 'eot', condition = line_begin, snippetType = 'autosnippet', dscr = "Expands 'oten' into an outline enumerate environment" },
     fmta(
       [[
         \begin{outline}[enumerate]

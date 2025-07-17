@@ -175,7 +175,7 @@ return {
     )
   ),
   s(
-    { trig = 'lr', condition = tex_utils.in_mathzone, wordTrig = true, snippetType = 'autosnippet', dscr = "Expands 'lr' into '\\left \\right" },
+    { trig = 'slr', condition = tex_utils.in_mathzone, wordTrig = true, snippetType = 'autosnippet', dscr = "Expands 'lr' into '\\left \\right" },
     fmta(
       [[
         \left<> {<>} \right<>
