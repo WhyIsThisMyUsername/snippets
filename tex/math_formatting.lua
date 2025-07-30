@@ -46,34 +46,13 @@ return {
     { trig = 'ig', condition = tex_utils.in_mathzone, wordTrig = true, snippetType = 'autosnippet', dscr = "Expands 'ig' into '\\int^{}_{}'" },
     fmta(
       [[
-        \int^{<>}_{<>}\diff <> 
+        \int^{<>}_{<>}<>\diff <> 
       ]],
       {
         i(1),
         i(2),
         i(3),
-      }
-    )
-  ),
-  s(
-    { trig = '^', dscr = "Expands '^' into '^{}'" },
-    fmta(
-      [[
-        ^{<>}
-      ]],
-      {
-        i(1),
-      }
-    )
-  ),
-  s(
-    { trig = '_', dscr = "Expands '_' into '_{}'" },
-    fmta(
-      [[
-        _{<>}
-      ]],
-      {
-        i(1),
+        i(4),
       }
     )
   ),
@@ -141,7 +120,7 @@ return {
     )
   ),
   s(
-    { trig = 'ee', condition = tex_utils.in_mathzone, wordTrig = true, snippetType = 'autosnippet', dscr = "Automatically expands 'ee' into '^{}'" },
+    { trig = 'ee', condition = tex_utils.in_mathzone, wordTrig = false, snippetType = 'autosnippet', dscr = "Automatically expands 'ee' into '^{}'" },
     fmta(
       [[
         ^{<>}
@@ -152,7 +131,7 @@ return {
     )
   ),
   s(
-    { trig = 'ss', condition = tex_utils.in_mathzone, wordTrig = true, snippetType = 'autosnippet', dscr = "Automatically expands 'ss' into '_{}'" },
+    { trig = 'ss', condition = tex_utils.in_mathzone, wordTrig = false, snippetType = 'autosnippet', dscr = "Automatically expands 'ss' into '_{}'" },
     fmta(
       [[
         _{<>}
@@ -163,7 +142,7 @@ return {
     )
   ),
   s(
-    { trig = 'sm', condition = tex_utils.in_mathzone, wordTrig = true, snippetType = 'autosnippet', dscr = "Automatically expands 'sm' into '\\sum^{}_{}'" },
+    { trig = 'sm', condition = tex_utils.in_mathzone, wordTrig = false, snippetType = 'autosnippet', dscr = "Automatically expands 'sm' into '\\sum^{}_{}'" },
     fmta(
       [[
         \sum^{<>}_{<>}
@@ -175,7 +154,7 @@ return {
     )
   ),
   s(
-    { trig = 'slr', condition = tex_utils.in_mathzone, wordTrig = true, snippetType = 'autosnippet', dscr = "Expands 'lr' into '\\left \\right" },
+    { trig = 'slr', condition = tex_utils.in_mathzone, wordTrig = false, snippetType = 'autosnippet', dscr = "Expands 'lr' into '\\left \\right" },
     fmta(
       [[
         \left<> {<>} \right<>
@@ -184,6 +163,43 @@ return {
         i(1),
         i(2),
         i(3),
+      }
+    )
+  ),
+  s(
+    { trig = 'rt', condition = tex_utils.in_mathzone, wordTrig = false, snippetType = 'autosnippet', dscr = "Expands 'rt' into '\\sqrt{}'" },
+    fmta(
+      [[
+        \sqrt{<>}
+      ]],
+      {
+        i(1),
+      }
+    )
+  ),
+  s(
+    { trig = 'pmat', dscr = "Expands 'pmat' into a pmatrix environment" },
+    fmta(
+      [[
+        \begin{pmatrix}
+            <>
+        \end{pmatrix}
+      ]],
+      {
+        i(1),
+      }
+    )
+  ),
+  s(
+    { trig = 'bmat', dscr = "Expands 'bmat' into a bmatrix environment" },
+    fmta(
+      [[
+        \begin{bmatrix}
+            <>
+        \end{bmatrix}
+      ]],
+      {
+        i(1),
       }
     )
   ),

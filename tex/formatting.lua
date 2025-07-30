@@ -1,3 +1,4 @@
+local tex_utils = {}
 local line_begin = require('luasnip.extras.expand_conditions').line_begin
 
 return {
@@ -46,7 +47,7 @@ return {
     )
   ),
   s(
-    { trig = 'env', dscr = "Expands 'env' into '\\begin{environment} \\end{environment}'" },
+    { trig = 'env', condition = line_begin, dscr = "Expands 'env' into '\\begin{environment} \\end{environment}'" },
     fmta(
       [[
         \begin{<>}
@@ -158,6 +159,27 @@ return {
       ]],
       {
         i(1),
+      }
+    )
+  ),
+  s(
+    { trig = 'wfg', dscr = "Expands 'wfg' into a wrapfigure environment" },
+    fmta(
+      [[
+        \begin{wrapfigure}{<>}{<>}
+            \centering
+            \includegraphics[width=<>\textwidth]{<>}
+            \caption{<>}
+            \label{fig:<>}
+        \end{wrapfigure}
+      ]],
+      {
+        i(1, 'r'), -- position (l, r, or i)
+        i(2, '0.4\textwidth'), -- width
+        i(3, '0.4'), -- image width
+        i(4, 'image.png'), -- image file
+        i(5, 'Caption for the wrapfigure'),
+        i(6, 'label'),
       }
     )
   ),

@@ -98,10 +98,10 @@ return {
   s({ trig = ';X', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\Xi ',
   }),
-  s({ trig = 'o', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = ';o', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\omicron ',
   }),
-  s({ trig = 'O', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = ';O', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\Omicron ',
   }),
   s({ trig = ';p', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
@@ -176,52 +176,52 @@ return {
   s({ trig = ';inf', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\infty ',
   }),
-  s({ trig = 'llra', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>llr', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\longleftrightarrow ',
   }),
-  s({ trig = 'lra', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>lr', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\leftrightarrow ',
   }),
-  s({ trig = 'lrla', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>lrl', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\longrightleftarrow ',
   }),
-  s({ trig = 'rla', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>rl', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\rightleftarrow ',
   }),
-  s({ trig = 'Llra', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>Llr', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\Longleftrightarrow ',
   }),
-  s({ trig = 'Lra', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>Lr', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\Leftrightarrow ',
   }),
-  s({ trig = 'Lrla', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>Lrl', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\Longrightleftarrow ',
   }),
-  s({ trig = 'Rla', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
-    t '\\Rightleftarrow ',
+  s({ trig = '>Rl', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+    t '\\Right>leftarrow ',
   }),
-  s({ trig = 'la', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>l', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\leftarrow ',
   }),
-  s({ trig = 'ra', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>r', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\rightarrow ',
   }),
-  s({ trig = 'La', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>L', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\Leftarrow ',
   }),
-  s({ trig = 'Ra', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>R', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\Rightarrow ',
   }),
-  s({ trig = 'Lla', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>Ll', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\Longleftarrow ',
   }),
-  s({ trig = 'Lra', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>Lr', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\Longrightarrow ',
   }),
-  s({ trig = 'lla', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>ll', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\longleftarrow ',
   }),
-  s({ trig = 'lra', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
+  s({ trig = '>lr', condition = tex_utils.in_mathzone, snippetType = 'autosnippet', wordTrig = false }, {
     t '\\longrightarrow ',
   }),
 }
